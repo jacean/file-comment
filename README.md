@@ -48,6 +48,10 @@ Users appreciate release notes as you update your extension.
 然后在vscode中执行命令
 > install from vsix
 
+## 发布
+1. 打开页面[插件管理](https://marketplace.visualstudio.com/manage)登录
+2. upload自己的插件
+3. 注意publisher需要和登录的账户名相同
 重启后就可以用了
 ## 参考
 [vscode编写插件详细过程](http://www.cnblogs.com/caipeiyu/p/5507252.html)
