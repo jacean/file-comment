@@ -3,7 +3,7 @@
     "displayName": "file-comment",
     "description": "a file comment ext",
     "version": "0.0.1",
-    "publisher": "jacean",
+    "publisher": "jaceanwan",
     "engines": {
         "vscode": "^1.5.0"
     },
