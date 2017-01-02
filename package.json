@@ -1,0 +1,64 @@
+{
+    "name": "file-comment",
+    "displayName": "file-comment",
+    "description": "a file comment ext",
+    "version": "0.0.1",
+    "publisher": "jacean",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onLanguage:javascript"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.addHeader",
+                "title": "add header"
+            },
+            {
+                "command": "extension.showInfo",
+                "title": "show info"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.addHeader",
+                "key": "ctrl+alt+h",
+                "when": "editorTextFocus"
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "fileComment configuration",
+            "properties": {
+                "filecomment.author": {
+                    "type": "string",
+                    "default": "jacean",
+                    "description": "author of the doc"
+                },
+                "filecomment.headerTemplate": {
+                    "type": "string",
+                    "default": "/*  header-comment\r\n/*  file   : &FILE&\r\n/*  author : &AUTHOR&\r\n/*  date   : &DATE&\r\n/*  last   : &LAST&\r\n*/\r\n",
+                    "description": "file header comment template"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.0.3",
+        "vscode": "^1.0.0",
+        "mocha": "^2.3.3",
+        "eslint": "^3.6.0",
+        "@types/node": "^6.0.40",
+        "@types/mocha": "^2.2.32"
+    }
+}
