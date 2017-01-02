@@ -49,3 +49,6 @@ Fixed issue #.
 Added features X, Y, and Z.
 
 -----------------------------------------------------------------------------------------------------------
+## 参考
+[vscode编写插件详细过程](http://www.cnblogs.com/caipeiyu/p/5507252.html)
+[VsCode插件：七牛图床工具，写文章更快一步](https://imys.net/20160726/vscode-extension-qiniu-upload.html)
