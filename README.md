@@ -1,35 +1,33 @@
 # file-comment README
 
-This is the README for your extension "file-comment". After writing up a brief description, we recommend including the following sections.
-
+给js文件添加文件头
+```
+/*  header-comment
+/*  file   : aaa
+/*  author : jacean
+/*  date   : 2017-1-1 16:20:22
+/*  last   : 2017-1-1 18:17:28
+*/
+```
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+vscode启动后，当打开js文件时插件自动启动
+插入注释方法:
+1. 当执行命令*add header* 
+2. ctrl+alt+h
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
 This extension contributes the following settings:
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+* `filecomment.author`: "jacean",
+* `filecomment.headerTemplate`: "/*  header-comment\r\n/*  file   : &FILE&\r\n/*  author : &AUTHOR&\r\n/*  date   : &DATE&\r\n/*  last   : &LAST&\r\n*/\r\n"
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
 
 ## Release Notes
 
@@ -37,7 +35,10 @@ Users appreciate release notes as you update your extension.
 
 ### 1.0.0
 
-Initial release of ...
+第一版，完成基本功能.
+- 添加文件头，包括:file,author,date,last
+- 保存文件时更新file(避免code之外更改文件名造成不匹配)和last
+- 绑定快捷键ctrl+alt+h实现文件头快速插入
 
 ### 1.0.1
 
@@ -48,18 +49,3 @@ Fixed issue #.
 Added features X, Y, and Z.
 
 -----------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on OSX or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on OSX or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (OSX) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
